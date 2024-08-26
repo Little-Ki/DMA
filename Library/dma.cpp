@@ -98,4 +98,6 @@ void DMA::close()
 
     VMMDLL_Close(m_handle);
     m_handle = nullptr;
+
+    m_scatter.close();
 }
