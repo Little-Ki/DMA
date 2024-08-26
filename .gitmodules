@@ -1,0 +1,6 @@
+[submodule "third_party/leechcore"]
+	path = third_party/leechcore
+	url = https://github.com/ufrisk/LeechCore.git
+[submodule "third_party/MemProcFS"]
+	path = third_party/MemProcFS
+	url = https://github.com/ufrisk/MemProcFS.git
