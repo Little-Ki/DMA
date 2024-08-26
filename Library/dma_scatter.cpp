@@ -14,7 +14,7 @@ void DMAScatter::create(VMMDLL_SCATTER_HANDLE handle, DWORD pid)
 
 bool DMAScatter::avaliable()
 {
-    return m_handle && m_dma->avaliable();
+    return m_handle && m_dma->valid();
 }
 
 void DMAScatter::retrieve(void* buffer, void* target, size_t size)
