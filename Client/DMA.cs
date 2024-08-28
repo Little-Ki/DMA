@@ -1,52 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Client
 {
+
     class DMA
     {
-        private UInt32 id;
+        [DllImport("dma.dll")]
+        public static extern bool Initialize([MarshalAs(UnmanagedType.LPStr)] string processName);
 
-        DMA()
-        {
-            id = DMALibrary.CreateDMA();
-        }
+        [DllImport("dma.dll")]
+        public static extern bool InitKeyboard();
 
-        public bool Initialize()
-        {
-            return DMALibrary.InitializeDMA(id);
-        }
+        [DllImport("dma.dll")]
+        public static extern bool IsKeyDown(UInt32 vk);
 
-        public void Close()
-        {
-            DMALibrary.CloseDMA(id);
-        }
+        [DllImport("dma.dll")]
+        public static extern float ReadFloat(IntPtr address);
 
-        public bool OpenProcess(string processName)
-        {
-            return DMALibrary.OpenProcess(id, processName);
-        }
+        [DllImport("dma.dll")]
+        public static extern bool WriteFloat(IntPtr address, float value);
 
-        public float ReadFloat(IntPtr address)
-        {
-            return DMALibrary.ReadFloat(id, address);
-        }
-        public bool WriteFloat(IntPtr address, float value)
-        {
-            return DMALibrary.WriteFloat(id, address, value);
-        }
+        [DllImport("dma.dll")]
+        public static extern int ReadInt(IntPtr address);
 
-        public int ReadInt(IntPtr address)
-        {
-            return DMALibrary.ReadInt(id, address);
-        }
+        [DllImport("dma.dll")]
+        public static extern bool WriteInt(IntPtr address, int value);
 
-        public bool WriteInt(IntPtr address, int value)
-        {
-            return DMALibrary.WriteInt(id, address, value);
-        }
     }
 }

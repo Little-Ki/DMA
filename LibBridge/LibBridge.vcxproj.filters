@@ -13,42 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="libs">
-      <UniqueIdentifier>{b8faee04-104d-4282-a301-f2894687337b}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="dma.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libs\leechcore.h">
-      <Filter>libs</Filter>
-    </ClInclude>
-    <ClInclude Include="libs\vmmdll.h">
-      <Filter>libs</Filter>
-    </ClInclude>
-    <ClInclude Include="log.hpp">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="dma_scatter.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="exports.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="dma.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="dma_scatter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="exports.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="exports.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
